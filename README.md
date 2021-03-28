@@ -2,8 +2,16 @@
 ## Set up project
 Comment initialiser le projet:
 * Pull le depôt
+* Avec composer installer les dépendances: $(/INSA_L_AIDE) composer update
 * Modifier le app/Config/App.php
 * Modifier le app/Config/Database.php
+
+###Problèmes possibles
+####Composer pas installer
+Sur linux : sudo apt install composer
+sur window : https://getcomposer.org/doc/00-intro.md
+
+⚠️ Pour la version Windows, lors du setup de composer il faut lui dire d'utiliser une version de php >7.
 
 ## Problème
 
