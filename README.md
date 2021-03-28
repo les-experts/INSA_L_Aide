@@ -6,9 +6,9 @@ Comment initialiser le projet:
 * Modifier le app/Config/App.php
 * Modifier le app/Config/Database.php
 
-###Problèmes possibles
+### Problèmes possibles
 
-####Composer pas installer
+#### Composer pas installer
 Sur linux : sudo apt install composer
 sur window : https://getcomposer.org/doc/00-intro.md
 
