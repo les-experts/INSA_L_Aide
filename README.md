@@ -2,7 +2,7 @@
 ## Set up project
 Comment initialiser le projet:
 * Pull le depôt
-* Avec composer installer les dépendances: $(/INSA_L_AIDE) composer update
+* Avec composer installer les dépendances: ```$(/INSA_L_AIDE) composer update```
 * Modifier le app/Config/App.php
 * Modifier le app/Config/Database.php
 
