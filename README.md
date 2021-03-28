@@ -3,6 +3,7 @@
 Comment initialiser le projet:
 * Pull le depôt
 * Modifier le app/Config/App.php
+* Modifier le app/Config/Database.php
 
 ## Problème
 
