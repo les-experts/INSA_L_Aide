@@ -10,7 +10,8 @@ Comment initialiser le projet:
 
 #### Composer pas installer
 Sur linux : sudo apt install composer
-sur window : https://getcomposer.org/doc/00-intro.md
+
+Sur window : https://getcomposer.org/doc/00-intro.md
 
 ⚠️ Pour la version Windows, lors du setup de composer il faut lui dire d'utiliser une version de php >7.
 
