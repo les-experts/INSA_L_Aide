@@ -1,0 +1,36 @@
+CRITICAL - 2021-02-22 08:50:02 --> Cannot modify header information - headers already sent by (output started at /var/www/appstarter/app/Config/Events.php:35)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/appstarter/vendor/codeigniter4/framework/system/Debug/Toolbar.php(384): header()
+#2 /var/www/appstarter/app/Config/Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#3 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#4 /var/www/appstarter/vendor/codeigniter4/framework/system/Events/Events.php(166): call_user_func()
+#5 /var/www/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(314): CodeIgniter\Events\Events::trigger()
+#6 /var/www/appstarter/public/index.php(46): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-22 08:50:02 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at /var/www/appstarter/app/Config/Events.php:35) in /var/www/appstarter/vendor/codeigniter4/framework/system/Debug/Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/appstarter/vendor/codeigniter4/framework/system/Debug/Exceptions.php(137): header()
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-22 08:50:06 --> Cannot modify header information - headers already sent by (output started at /var/www/appstarter/app/Config/Events.php:35)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/appstarter/vendor/codeigniter4/framework/system/Debug/Toolbar.php(384): header()
+#2 /var/www/appstarter/app/Config/Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#3 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#4 /var/www/appstarter/vendor/codeigniter4/framework/system/Events/Events.php(166): call_user_func()
+#5 /var/www/appstarter/vendor/codeigniter4/framework/system/CodeIgniter.php(314): CodeIgniter\Events\Events::trigger()
+#6 /var/www/appstarter/public/index.php(46): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-22 08:50:06 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at /var/www/appstarter/app/Config/Events.php:35) in /var/www/appstarter/vendor/codeigniter4/framework/system/Debug/Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/appstarter/vendor/codeigniter4/framework/system/Debug/Exceptions.php(137): header()
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
