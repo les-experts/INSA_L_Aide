@@ -7,6 +7,7 @@ class FileTable extends BaseController
 {
 	public function index()
 	{
+		helper('url'); 
 
 		if(func_num_args() <=0){
 			echo view("errors/html/error_404.php");
@@ -17,8 +18,8 @@ class FileTable extends BaseController
 		$model = new GitFileModel();
 
 		$files = $model->getFiles($path);
-		
-		$data["data"] = $files;
-		echo view("debug/index",$data);
+
+		$data["files"] = $files;
+		echo view("FileTable/index",$data);
 	}
 }

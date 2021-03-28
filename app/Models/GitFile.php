@@ -15,8 +15,16 @@ class GitFile
         $this->path_in_git = $path;
     }
 
-    private function get_repositoty_path(){
+    public function get_repositoty_path(){
         return GitFileModel::$get_repository_path;
+    }
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getPath_in_git(){
+        return $this->path_in_git;
     }
 
     /**
@@ -25,7 +33,7 @@ class GitFile
      * @return string
      */
     public function get_full_path(){
-        return get_repositoty_path().get_path();
+        return $this->get_repositoty_path()."/".$this->get_path();
     }
 
     /**
@@ -34,20 +42,23 @@ class GitFile
      * @return string
      */
     public function get_path(){
-        return $path_in_git.$name;
+        return $this->getPath_in_git()."/".$this->getName();
     }
 
+    public function is_dir(){
+        return $this->get_type() == "directory";
+    }
     /**
      * Fonction qui renvoie le type de fichier. Exemple: Image, Directory, Unknown...
      * 
      * @return string
      */
     public function get_type(){
-        if(is_dir(get_full_path())){
+        if(is_dir($this->get_full_path())){
             return "directory";
         }
         else{
-            $tab = explode(".", $this->$name);
+            $tab = explode(".", $this->getName());
             if(count($tab) <=1) return 'unknown';
 
             switch (end($tab)) {

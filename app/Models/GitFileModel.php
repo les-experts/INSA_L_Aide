@@ -7,11 +7,11 @@ use App\Models\GitFile;
 
 class GitFileModel extends Model
 {
-    public const get_repository_path = "../app/RepositoryGit/";
+    public static $get_repository_path = "../app/RepositoryGit/";
     
     public function getFiles($path = false)
     {
-		$files = scandir(self::get_repository_path.$path);
+		$files = scandir(self::$get_repository_path.$path);
         $gitFileList = array();
         foreach ($files as $key => $value) {
             $gitFileList[] = new GitFile($value,$path);
