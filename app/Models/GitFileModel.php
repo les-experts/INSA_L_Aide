@@ -19,4 +19,24 @@ class GitFileModel extends Model
         return $gitFileList;
     }
 
+    public function getFile($paths = FALSE){    
+        if($paths === FALSE){
+            throw new Exception("Il n'y a aucun paramètres");
+        } 
+        if(!is_array($paths)){
+            $paths = array($paths);
+        }
+
+        $gitFileList = array();
+        foreach ($paths as $key => $value) {
+            $node = explode("/",$value);
+            do {
+                $name = array_pop($node);
+            } while($name == "");
+            $path = implode("/",$node);
+            $gitFileList[] = new GitFile($name,$path);
+        }
+        return $gitFileList;
+    }
+
 }

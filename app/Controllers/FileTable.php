@@ -10,16 +10,24 @@ class FileTable extends BaseController
 		helper('url'); 
 
 		if(func_num_args() <=0){
-			echo view("errors/html/error_404.php");
-			exit(0);
+			throw new Exception("Il n'y a aucun paramètres");
 		} 
 		$path = implode("/",func_get_args());
+		echo $this->view_dir($path);
+	}
+
+	public function view_dir($path){
+		if(empty($path)){
+			throw new Exception("Il n'y a aucun paramètres");
+		}
 
 		$model = new GitFileModel();
-
 		$files = $model->getFiles($path);
+		return $this->view($files);
+	}
 
+	public function view($files){
 		$data["files"] = $files;
-		echo view("FileTable/index",$data);
+		return view("FileTable/index",$data);
 	}
 }
