@@ -130,4 +130,5 @@ nb-configuration.xml
 /app/Config/Database.php
 
 #Repo git
-app/RepositoryGit/
+writable/RepositoryGit/
+writable/debugbar/

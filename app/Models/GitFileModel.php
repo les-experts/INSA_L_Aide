@@ -7,8 +7,8 @@ use App\Models\GitFile;
 
 class GitFileModel extends Model
 {
-    public static $get_repository_path = "../app/RepositoryGit/";
-    
+    public static $get_repository_path = "../writable/RepositoryGit/";
+
     public function getFiles($path = false)
     {
 		$files = scandir(self::$get_repository_path.$path);
@@ -19,10 +19,10 @@ class GitFileModel extends Model
         return $gitFileList;
     }
 
-    public function getFile($paths = FALSE){    
+    public function getFile($paths = FALSE){
         if($paths === FALSE){
             throw new Exception("Il n'y a aucun paramètres");
-        } 
+        }
         if(!is_array($paths)){
             $paths = array($paths);
         }

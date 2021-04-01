@@ -12,11 +12,12 @@ class Search extends BaseController
     }
 
     public function index(){
-		$model = new GitFileModel();
+
+        $model = new GitFileModel();
 
         $post = $this->request->getPost();
         if(!isset($post['search_pattern']) || empty($post['search_pattern'])){
-			throw new Exception("Il n'y a aucun paramètres dans Search/index");
+			       throw new Exception("Il n'y a aucun paramètres dans Search/index");
         }
         $paths = $this->search_by_title("/".$post['search_pattern']."/i");
         $files = $model->getFile($paths);
@@ -27,8 +28,8 @@ class Search extends BaseController
 
     public function search_by_title($pattern){
         helper('filesystem');
-        $git_repository = directory_map("../app/RepositoryGit");
-        
+        $git_repository = directory_map("../writable/RepositoryGit");
+
         function recur($object,$pattern,$prefix = ""){
             $match = array();
             if(is_array($object)){
