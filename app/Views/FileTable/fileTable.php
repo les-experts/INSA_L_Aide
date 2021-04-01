@@ -34,7 +34,7 @@ if(!isset($urlMethode) || empty($urlMethode)){
             echo "<span class='title'>".$value->getName()."</span>";
             echo "<p> FILE</p>";
         }
-        echo "</li>";
+        echo "</a></li>";
     }
 ?>
 </ul>
