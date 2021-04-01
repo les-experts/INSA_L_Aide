@@ -21,9 +21,9 @@ if(!isset($urlMethode) || empty($urlMethode)){
 
     
     foreach($files as $key => $value) {
-
+        $slashOrNot = (empty($value->getPath_in_git())?'':'/');
         echo '<li class="collection-item avatar clickable-file-or-folder">
-        <a href='.base_url($urlMethode).'/'.$value->get_path().'>';
+        <a href='.base_url($urlMethode).$slashOrNot.$value->get_path().'>';
 
         if (!$value->is_dir()) {
             echo "<i class='material-icons circle green'>description</i>";

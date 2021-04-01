@@ -16,6 +16,20 @@ class FileTable extends BaseController
 
 		$model = new GitFileModel();
 		$files = $model->getFiles($path);
+
+		if(!isset($path) || empty($path)){
+			foreach ($files as $key => $value) {
+				if($value->getName() == ".."){
+					unset($files[$key]);
+				}
+			}
+		}
+
+		foreach ($files as $key => $value) {
+			if($value->getName() == "."){
+				unset($files[$key]);
+			}
+		}
 		return $this->view($files);
 	}
 
