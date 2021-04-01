@@ -128,3 +128,6 @@ nb-configuration.xml
 # Local config
 /app/Config/App.php
 /app/Config/Database.php
+
+#Repo git
+app/RepositoryGit/
