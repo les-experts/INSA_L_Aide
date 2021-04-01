@@ -4,12 +4,23 @@ namespace App\Models;
 use CodeIgniter\Model;
 use App\Models\GitFileModel;
 
+/**
+ * GitFile est un objet qui représente un ficher contenue dans le RepositoryGit
+ * 
+ */
 class GitFile
 {
     private $name;
     private $path_in_git;
 
 
+    /**
+     * Contructeur de GitFile
+     * 
+     * @param string $name
+     * @param string $path
+     * @return GitFile
+     */
     public function __construct($name,$path){
         $this->name = $name;
         $this->path_in_git = $path;
@@ -19,11 +30,11 @@ class GitFile
         return GitFileModel::$get_repository_path;
     }
 
-    public function getName(){
+    public function get_name(){
         return $this->name;
     }
 
-    public function getPath_in_git(){
+    public function get_path_from_git(){
         return $this->path_in_git;
     }
 
@@ -33,7 +44,7 @@ class GitFile
      * @return string
      */
     public function get_full_path(){
-        return $this->get_repositoty_path()."/".$this->get_path();
+        return $this->get_repositoty_path()."/".$this->get_path_from_git_with_name();
     }
 
     /**
@@ -41,8 +52,8 @@ class GitFile
      * 
      * @return string
      */
-    public function get_path(){
-        return $this->getPath_in_git()."/".$this->getName();
+    public function get_path_from_git_with_name(){
+        return $this->get_path_from_git ()."/".$this->get_name();
     }
 
     public function is_dir(){
@@ -58,7 +69,7 @@ class GitFile
             return "directory";
         }
         else{
-            $tab = explode(".", $this->getName());
+            $tab = explode(".", $this->get_name());
             if(count($tab) <=1) return 'unknown';
 
             switch (end($tab)) {

@@ -19,14 +19,14 @@ class FileTable extends BaseController
 
 		if(!isset($path) || empty($path)){
 			foreach ($files as $key => $value) {
-				if($value->getName() == ".."){
+				if($value->get_name() == ".."){
 					unset($files[$key]);
 				}
 			}
 		}
 
 		foreach ($files as $key => $value) {
-			if($value->getName() == "."){
+			if($value->get_name() == "."){
 				unset($files[$key]);
 			}
 		}

@@ -21,19 +21,19 @@ if(!isset($urlMethode) || empty($urlMethode)){
 
     
     foreach($files as $key => $value) {
-        $slashOrNot = (empty($value->getPath_in_git())?'':'/'); // si c'est la racine il ne faut pas ajouer de "/" sinon on se retourve avec http://base_url/FileTable/index//directory
-        $encode_path = str_replace(" ","%20",$value->get_path());
+        $slashOrNot = (empty($value->get_path_from_git())?'':'/'); // si c'est la racine il ne faut pas ajouer de "/" sinon on se retourve avec http://base_url/FileTable/index//directory
+        $encode_path = str_replace(" ","%20",$value->get_path_from_git_with_name());
         
         echo '<li class="collection-item avatar clickable-file-or-folder">
         <a href='.base_url($urlMethode).$slashOrNot.$encode_path.'>';
 
         if (!$value->is_dir()) {
             echo "<i class='material-icons circle green'>description</i>";
-            echo "<span class='title'>".$value->getName()."</span>";
+            echo "<span class='title'>".$value->get_name()."</span>";
         } else {
 
             echo "<i class='material-icons circle blue'>folder</i>";
-            echo "<span class='title'>".$value->getName()."</span>";
+            echo "<span class='title'>".$value->get_name()."</span>";
             echo "<p> FILE</p>";
         }
         echo "</a></li>";
