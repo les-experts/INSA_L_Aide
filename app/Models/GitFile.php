@@ -26,20 +26,37 @@ class GitFile
         $this->path_in_git = $path;
     }
 
+    /**
+     * Retourne l'url relative à partir de /public/index.php vers le dossier RepositoryGit ex: ../writable/RepositoryGit
+     * 
+     * @return string
+     */
     public function get_repositoty_path(){
         return GitFileModel::$get_repository_path;
     }
 
+
+    /**
+     * Retourne le nom du fichier
+     */
     public function get_name(){
         return $this->name;
     }
 
+    /**
+     * Retourne le lien à partir du RepositoryGit vers le fichier.
+     * ex: picadequa2021_gp/documents/anciensCRà_actualiser/reu_GP
+     * Le lien est retourné sans le nom du ficher.
+     * 
+     * @see GitFile::get_path_from_git_with_name
+     */
     public function get_path_from_git(){
         return $this->path_in_git;
     }
 
     /**
      * Function qui renvoie le lien vers le fichier à partir de la racine du projet.
+     * ex: ../writable/RepositoryGit/picadequa2021_gp/documents/anciens_CR_%C3%A0_actualiser/reu_GP
      * 
      * @return string
      */
@@ -49,6 +66,8 @@ class GitFile
 
     /**
      * Function qui renvoie le lien vers le fichier à partir de la racine du dossier RepositoryGit.
+     * ex: picadequa2021_gp/documents/anciensCRà_actualiser/reu_GP/maitre_php.php
+     * Le lien est retourné avec le nom du fichier 
      * 
      * @return string
      */
@@ -56,9 +75,13 @@ class GitFile
         return $this->get_path_from_git ()."/".$this->get_name();
     }
 
+    /**
+     * Renvoie TRUE si le GitFile est un dossier. A l'inverse il renvoie FALSE si c'est un fichier.
+     */
     public function is_dir(){
         return $this->get_type() == "directory";
     }
+
     /**
      * Fonction qui renvoie le type de fichier. Exemple: Image, Directory, Unknown...
      * 

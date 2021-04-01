@@ -7,9 +7,9 @@
  * 
  */
    
-if(!isset($urlMethode) || empty($urlMethode)){
-    $urlMethode = "FileTable/index";
-}
+    if(!isset($urlMethode) || empty($urlMethode)){
+        $urlMethode = "FileTable/index";
+    }
 
 ?>
 
@@ -18,8 +18,6 @@ if(!isset($urlMethode) || empty($urlMethode)){
 <ul class='collection'>
 
   <?php 
-
-    
     foreach($files as $key => $value) {
         $slashOrNot = (empty($value->get_path_from_git())?'':'/'); // si c'est la racine il ne faut pas ajouer de "/" sinon on se retourve avec http://base_url/FileTable/index//directory
         $encode_path = str_replace(" ","%20",$value->get_path_from_git_with_name());
