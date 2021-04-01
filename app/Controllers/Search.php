@@ -8,7 +8,7 @@ use App\Models\GitFile;
 class Search extends BaseController
 {
     public function search_bar(){
-        echo view("Search/search_bar.php");
+        return view("Search/SearchBar.php");
     }
 
     public function index(){
