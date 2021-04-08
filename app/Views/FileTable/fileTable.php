@@ -6,10 +6,6 @@
  * @param $files Une liste d'objet GitFile. Ces GitFiles seront affiché dans le tableau.
  * 
  */
-   
-    if(!isset($urlMethode) || empty($urlMethode)){
-        $urlMethode = "FileTable/index";
-    }
 
 ?>
 

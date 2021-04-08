@@ -34,11 +34,13 @@ class Search extends BaseController
         if(!isset($post['search_pattern']) || empty($post['search_pattern'])){
 			       throw new Exception("Il n'y a aucun paramètres dans Search/index");
         }
-        $paths = $this->search_by_title("/".$post['search_pattern']."/i");
+        //$paths = $this->search_by_title("/".$post['search_pattern']."/i");
+        $paths = $this->search_by_content("/".$post['search_pattern']."/i");
         $files = $model->getFile($paths);
 
         $file_Table_controleur = new FileTable();
-        echo $file_Table_controleur->view($files);
+        $file_table = $file_Table_controleur->view($files,"Accueil/index");
+        echo (new Accueil())->displayFileTable($file_table);
     }
 
     /**
