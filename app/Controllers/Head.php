@@ -9,6 +9,15 @@ class Head
     private $js = array();
     private $title = "INSAL'aide";
 
+
+    public static function parseCSS($cssLinks = FALSE){
+        $defaultCssLink = array("static/css/materialize.min.css");
+        if(!is_array($cssLinks)) $cssLinks = array($cssLinks);
+        $cssLinks = array_merge($cssLinks,$defaultCssLink);
+        $cssLinks = array_unique($cssLinks);
+        return $cssLinks;
+    }
+
     public function addCss($cssLink = FALSE){
         if($cssLink === FALSE)return;
 
@@ -20,6 +29,7 @@ class Head
         }
         $this->css = array_unique($this->css);
     }
+    
 
     public function addJs($JsLink = FALSE){
         if($JsLink === FALSE)return;

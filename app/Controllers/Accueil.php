@@ -12,12 +12,8 @@ class Accueil extends BaseController
         $filetable_html = $filetable_object->view_dir($path);
         $filetable_css = $filetable_object->getCss();
 
-        $head_object = new Head();
-        $head_object->addCss($filetable_css);
-        $head_html = $head_object->view();
-        
+        $data["cssLink"] = Head::parseCSS($filetable_css);
         $data["filetable"] = $filetable_html;
-        $data["head"] = $head_html;
 
         echo view("Accueil/index",$data);
 
