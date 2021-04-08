@@ -8,18 +8,12 @@ class Home extends BaseController
 	{
 				$path = implode("/",func_get_args());
 
-
-				$header_object = new Header();
-				$header_css = $header_object->getCss();
-				$header_html = $header_object->getView();
-
         $fileTable_object = new FileTable();
         $fileTable_css = $fileTable_object->getCss();
 				$fileTable_html = $fileTable_object->view_dir($path,"Home/index");
 
-        $data["cssLink"] = array_merge($header_css, $fileTable_css);
+        $data["cssLink"] = $fileTable_css;
         $data["fileTable"] = $fileTable_html;
-				$data["header"] = $header_html;
 
         return view("Home/index",$data);
 

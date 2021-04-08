@@ -1,0 +1,16 @@
+@import url("/static/global.css");
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding : 0 !important;
+}
+
+footer a {
+  color : inherit;
+}
+
+footer.page-footer {
+  background-color: var(--main-bg-color);
+}

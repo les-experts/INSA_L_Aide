@@ -1,4 +1,10 @@
+@import url("/static/global.css");
+
 .nav-wrapper ul {
   width: 90%;
   height: 100%;
+}
+
+nav {
+  background-color : var(--main-bg-color);
 }

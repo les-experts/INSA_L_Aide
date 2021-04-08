@@ -1,5 +1,5 @@
-<?= $this->extend('Layouts/HtmlPageLayout') ?>
+<?= $this->extend('Layouts/BaseLayout') ?>
 
 <?= $this->section('content') ?>
-    <?=$fileTable?>
+    <?= $fileTable ?>
 <?= $this->endSection() ?>
