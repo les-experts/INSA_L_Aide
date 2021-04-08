@@ -64,4 +64,23 @@ class FileTable extends BaseController
 		"static/Materialize/css/materialize.min.css");
 		return $link;
 	}
+
+	public function downloadFile($path){
+		if(func_num_args() < 1)return;
+		if(func_num_args() > 1){
+			$path = implode("/",func_get_args());
+		}
+		$path = GitFileModel::$get_repository_path.$path;
+		if (file_exists($path)) {
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/octet-stream');
+			header('Content-Disposition: attachment; filename="'.basename($path).'"');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate');
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($path));
+			readfile($path);
+			exit;
+		}
+	}
 }
