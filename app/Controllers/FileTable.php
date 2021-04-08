@@ -51,6 +51,15 @@ class FileTable extends BaseController
 	 */
 	public function view($files){
 		$data["files"] = $files;
-		return view("FileTable/index",$data);
+		return view("FileTable/filetable",$data);
+	}
+
+	public function getCss(){
+		$link = array(
+		"static/css/FileTable.css",
+		"static/css/SearchBar.css",
+		"static/css/icon.css",
+		"static/css/materialize.min.css",);
+		return $link;
 	}
 }

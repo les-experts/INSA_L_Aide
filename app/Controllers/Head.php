@@ -3,23 +3,47 @@
 namespace App\Controllers;
 
 use App\Models\GitFileModel;
-class Head extends BaseController
+class Head
 {
-    public function getCss(){
-		helper('html');
-        $link = array(
-			['href'  => base_url("static/css/FileTable.css"),'rel'   => 'stylesheet','type'  => 'text/css'],
-			['href'  => base_url("static/css/SearchBar.css"),'rel'   => 'stylesheet','type'  => 'text/css'],
-			['href'  => 'https://fonts.googleapis.com/icon?family=Material+Icons'],
-			['href'  => 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'],
-		);
+    public $css = array();
+    private $js = array();
+    private $title = "INSAL'aide";
 
-        $css = "";
-        foreach ($link as $value) 
-        {
-            $css.=link_tag($value);
+    public function addCss($cssLink = FALSE){
+        if($cssLink === FALSE)return;
 
+        if(!is_array($cssLink)){
+            $cssLink = array($cssLink);
         }
-        return $css;
+        foreach ($cssLink as $key => $value) {
+            $this->css[] = $value;
+        }
+        $this->css = array_unique($this->css);
+    }
+
+    public function addJs($JsLink = FALSE){
+        if($JsLink === FALSE)return;
+
+        if(!is_array($JsLink)){
+            $JsLink = array($JsLink);
+        }
+        foreach ($JsLink as $key => $value) {
+            $this->js[] = $value;
+        }
+        $this->js = array_unique($this->js);
+    }
+
+    public function setTitle($title = FALSE){
+        if($title === FALSE)return;
+        $this->title = $title;
+    }
+
+    public function view(){
+        helper('html');
+        $data["cssLink"] = $this->css;
+        $data["jsLink"] = $this->js;
+        $data["title"] = $this->title;
+        $html = view("Head/index",$data);
+        return $html;
     }
 }
