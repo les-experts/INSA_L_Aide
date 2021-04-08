@@ -11,7 +11,12 @@
           /* Defining variables relative to header, used later in the layout */
   				$header_object = new Header();
   				$header_css = $header_object->getCss();
-          $cssLink = array_merge($cssLink, $header_css);
+          if(isset($cssLink) && !empty($cssLink)){
+            $cssLink = array_merge($cssLink, $header_css);
+          }
+          else{
+            $cssLink = $header_css;
+          }
 
           /* Defining variables relative to footer, used later in the layout */
           $footer_object = new Footer();
