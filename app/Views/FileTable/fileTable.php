@@ -1,23 +1,21 @@
 <?php
 /**
  *  Une vue qui affiche la table des fichiers
- * 
+ *
  * @param $urlMethode Est l'identifiant du controleur et de la méthode utilisée. Apres le base_url et avant les paramêtres. Par defaut: FileTable/index
  * @param $files Une liste d'objet GitFile. Ces GitFiles seront affiché dans le tableau.
- * 
+ *
  */
 
 ?>
 
-<h1>FileTable</h1>
-
 <ul class='collection'>
 
-  <?php 
+  <?php
     foreach($files as $key => $value) {
         $slashOrNot = (empty($value->get_path_from_git())?'':'/'); // si c'est la racine il ne faut pas ajouer de "/" sinon on se retourve avec http://base_url/FileTable/index//directory
         $encode_path = str_replace(" ","%20",$value->get_path_from_git_with_name());
-        
+
         echo '<li class="collection-item avatar clickable-file-or-folder">
         <a href='.base_url($urlMethode).$slashOrNot.$encode_path.'>';
 

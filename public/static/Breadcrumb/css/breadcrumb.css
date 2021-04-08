@@ -1,0 +1,26 @@
+@import url("/static/global.css");
+
+.clean {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.breadcrumb {
+  color : grey;
+  height : 100%;
+}
+
+.breadcrumb:before {
+  color : grey;
+  display: inline;
+}
+
+.breadcrumb:last-child {
+  color: var(--second-color);
+}
+
+.breadcrumb-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  direction: rtl;
+}

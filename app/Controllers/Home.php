@@ -12,8 +12,13 @@ class Home extends BaseController
         $fileTable_css = $fileTable_object->getCss();
 				$fileTable_html = $fileTable_object->view_dir($path,"Home/index");
 
-        $data["cssLink"] = $fileTable_css;
+				$breadcrumb_object = new Breadcrumb();
+				$breadcrumb_css = $breadcrumb_object->getCss();
+				$breadcrumb_html = $breadcrumb_object->getView($path);
+
+        $data["cssLink"] = array_merge($fileTable_css, $breadcrumb_css);
         $data["fileTable"] = $fileTable_html;
+				$data["breadcrumb"] = $breadcrumb_html;
 
         return view("Home/index",$data);
 
