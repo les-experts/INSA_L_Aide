@@ -11,14 +11,14 @@ class FileTable extends BaseController
 	 */
 	public function index()
 	{
-		helper('url'); 
+		helper('url');
 		$path = implode("/",func_get_args());
 		echo $this->view_dir($path);
 	}
 
 	/**
 	 * Retourne le HTML d'une FileTable qui représente le/les fichier/s $path
-	 * 
+	 *
 	 * @param string @path le chemin à partir de RepositoryGit vers un fichier
 	 * @return html le code html de la FileTable
 	 */
@@ -45,7 +45,7 @@ class FileTable extends BaseController
 
 	/**
 	 * Retourne le HTML d'une FileTable qui représente le/les fichier/s $files
-	 * 
+	 *
 	 * @param GitFile les fichiers à représenter
 	 * @param string les fichiers à représenter
 	 * @return html le code html de la FileTable
@@ -60,8 +60,8 @@ class FileTable extends BaseController
 		$link = array(
 		"static/css/FileTable.css",
 		"static/css/SearchBar.css",
-		"static/css/icon.css",
-		"static/css/materialize.min.css");
+		"static/Materialize/css/icon.css",
+		"static/Materialize/css/materialize.min.css");
 		return $link;
 	}
 }

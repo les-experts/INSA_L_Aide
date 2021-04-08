@@ -5,7 +5,7 @@
     <title><?= $this->renderSection('title')?></title>
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('static/Materialize/css/materialize.min.css') ?>">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 
     <?php define('materializeIncluded', true); ?>
 
