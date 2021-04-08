@@ -1,9 +1,5 @@
-<?= $this->extend('Layouts/BaseLayout') ?>
-
-<?= $this->section('title') ?>
-    INSAled - Bienvenue !
-<?= $this->endSection() ?>
+<?= $this->extend('Layouts/HtmlPageLayout') ?>
 
 <?= $this->section('content') ?>
-    normalement la y'a le contenu
+    <?=$filetable?>
 <?= $this->endSection() ?>

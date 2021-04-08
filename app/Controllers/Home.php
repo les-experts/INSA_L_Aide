@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-class Accueil extends BaseController
+class Home extends BaseController
 {
 	public function index()
-	{  
+	{
 		$path = implode("/",func_get_args());
 
         $filetable_object = new FileTable();
-        $filetable_html = $filetable_object->view_dir($path,"Accueil/index");
+        $filetable_html = $filetable_object->view_dir($path,"Home/index");
 
         echo $this->displayFileTable($filetable_html);
 
@@ -22,6 +22,6 @@ class Accueil extends BaseController
         $data["cssLink"] = $filetable_css;
         $data["filetable"] = $filetable_html;
 
-        return view("Accueil/index",$data);
+        return view("Home/index",$data);
     }
 }

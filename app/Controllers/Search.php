@@ -39,8 +39,8 @@ class Search extends BaseController
         $files = $model->getFile($paths);
 
         $file_Table_controleur = new FileTable();
-        $file_table = $file_Table_controleur->view($files,"Accueil/index");
-        echo (new Accueil())->displayFileTable($file_table);
+        $file_table = $file_Table_controleur->view($files,"Home/index");
+        echo (new Home())->displayFileTable($file_table);
     }
 
     /**
