@@ -21,7 +21,10 @@
           /* Defining variables relative to footer, used later in the layout */
           $footer_object = new Footer();
   				$footer_css = $footer_object->getCss();
-          $cssLink = array_merge($cssLink, $footer_css);
+
+          $css_container = array(
+            "static/Container/container.css");
+          $cssLink = array_merge($cssLink, $footer_css, $css_container);
 
           $cssLink = Head::parseCSS($cssLink);
 
