@@ -10,9 +10,9 @@ class Search extends BaseController
     /**
      * Affiche une bar de recherche qui recherche dans le dossier "RepositoryGit les éléments qui ont pour titre un pattern donnée.
      * Retourne le HTML correspondant à la bar de recherche.
-     * 
+     *
      * @return html;
-     * 
+     *
      */
     public function search_bar(){
         return view("Search/SearchBar.php");
@@ -20,8 +20,8 @@ class Search extends BaseController
 
 
     /**
-     * Affiche une FileTable avec les fichiers qui ont pour titre un pattern indiqué dans $_POST['search_pattern'] 
-     * 
+     * Affiche une FileTable avec les fichiers qui ont pour titre un pattern indiqué dans $_POST['search_pattern']
+     *
      * @param string $_POST['search_pattern']
      * @return void
      *
@@ -46,7 +46,7 @@ class Search extends BaseController
     /**
      * Cherche dans le RepositoryGit les fichiers qui ont pour name $pattern
      * Retourne un tableau de fichiers GitFile
-     * 
+     *
      * @param string $pattern
      * @return array
      */
@@ -75,5 +75,13 @@ class Search extends BaseController
         }
 
         return recur($git_repository,$pattern);
+    }
+
+    public function getCss(){
+      return array();
+    }
+
+    public function getJS(){
+      return array();
     }
 }

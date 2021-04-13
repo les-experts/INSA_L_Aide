@@ -10,10 +10,16 @@ class Header extends BaseController
 	}
 
 	public function getCss(){
-		$link = array(
-		"static/Header/css/header.css",
-		"static/Materialize/css/materialize.min.css");
-		return $link;
+		return array(
+			"static/Header/css/header.css",
+			"static/Materialize/css/materialize.min.css"
+		);
+	}
+
+	public function getJS(){
+		return array(
+			"static/Header/js/header.js"
+		);
 	}
 
 }

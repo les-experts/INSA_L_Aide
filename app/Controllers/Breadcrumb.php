@@ -14,10 +14,13 @@ class Breadcrumb extends BaseController
 	}
 
 	public function getCss(){
-		$link = array(
+		return array(
 		"static/Breadcrumb/css/breadcrumb.css",
 		"static/Materialize/css/materialize.min.css");
-		return $link;
+	}
+
+	public function getJS(){
+		return array();
 	}
 
 }

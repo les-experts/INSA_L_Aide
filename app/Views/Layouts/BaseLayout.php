@@ -11,6 +11,8 @@
           /* Defining variables relative to header, used later in the layout */
   				$header_object = new Header();
   				$header_css = $header_object->getCss();
+          $header_js = $header_object->getJS();
+
           if(isset($cssLink) && !empty($cssLink)){
             $cssLink = array_merge($cssLink, $header_css);
           }
@@ -18,13 +20,18 @@
             $cssLink = $header_css;
           }
 
+
           /* Defining variables relative to footer, used later in the layout */
           $footer_object = new Footer();
   				$footer_css = $footer_object->getCss();
+          $footer_js = $footer_object->getJS();
 
-          $css_container = array(
-            "static/Container/container.css");
-          $cssLink = array_merge($cssLink, $footer_css, $css_container);
+          if(isset($cssLink) && !empty($cssLink)){
+            $cssLink = array_merge($cssLink, $footer_css);
+          }
+          else{
+            $cssLink = $footer_css;
+          }
 
           $cssLink = Head::parseCSS($cssLink);
 
@@ -49,6 +56,16 @@
         <?= $footer_object->getView() ?>
 
         <?php
+
+        if(isset($jsLink) && !empty($jsLink)){
+          $jsLink = array_merge($jsLink, $header_js);
+          $jsLink = array_merge($jsLink, $footer_js);
+        }
+        else{
+          $jsLink = $header_js;
+          $jsLink = array_merge($jsLink, $footer_js);
+        }
+
         if(isset($jsLink)){
             foreach ($jsLink as $value) {
                 echo script_tag($value);

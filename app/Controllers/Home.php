@@ -24,4 +24,12 @@ class Home extends BaseController
 
 	}
 
+	public function getCss(){
+		return array();
+	}
+
+	public function getJS(){
+		return array();
+	}
+
 }

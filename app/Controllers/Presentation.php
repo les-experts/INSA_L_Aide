@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Presentation extends BaseController
 {
-	public function index()
+	public function getView()
 	{
 		$path = implode("/",func_get_args());
 
@@ -25,7 +25,15 @@ class Presentation extends BaseController
         $data["fileTable"] = $fileTable_html;
 		$data["breadcrumb"] = $breadcrumb_html;
 
-        return view("Presentation/index",$data);
+        return view("Presentation/presentation",$data);
 
+	}
+
+	public function getCss(){
+		return array();
+	}
+
+	public function getJS(){
+		return array();
 	}
 }

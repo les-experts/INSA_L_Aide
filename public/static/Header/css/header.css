@@ -1,10 +1,25 @@
 @import url("/static/global.css");
 
-.nav-wrapper ul {
-  width: 90%;
-  height: 100%;
-}
-
 nav {
   background-color : var(--main-color);
+}
+
+nav ul.right {
+    height: 100%;
+}
+
+nav ul.right li {
+    height: 100%;
+}
+
+@media (max-width: 992px) {
+  .search-module {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .search-module {
+    width: 50vw;
+  }
 }

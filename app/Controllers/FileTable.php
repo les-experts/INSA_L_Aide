@@ -57,11 +57,14 @@ class FileTable extends BaseController
 	}
 
 	public function getCss(){
-		$link = array(
-		"static/FileTable/css/FileTable.css",
-		"static/Materialize/css/icon.css",
-		"static/Materialize/css/materialize.min.css");
-		return $link;
+		return array(
+			"static/Materialize/css/icon.css",
+			"static/Materialize/css/materialize.min.css"
+		);
+	}
+
+	public function getJS(){
+		return array();
 	}
 
 	public function downloadFile($path){

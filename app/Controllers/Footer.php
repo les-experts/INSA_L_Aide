@@ -10,10 +10,14 @@ class Footer extends BaseController
 	}
 
 	public function getCss(){
-		$link = array(
-		"static/Footer/css/footer.css",
-		"static/Materialize/css/materialize.min.css");
-		return $link;
+		return array(
+			"static/Footer/css/footer.css",
+			"static/Materialize/css/materialize.min.css"
+		);
+	}
+
+	public function getJS(){
+		return array();
 	}
 
 }
