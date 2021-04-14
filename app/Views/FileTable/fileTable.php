@@ -16,11 +16,36 @@
         $slashOrNot = (empty($value->get_path_from_git())?'':'/'); // si c'est la racine il ne faut pas ajouer de "/" sinon on se retourve avec http://base_url/FileTable/index//directory
         $encode_path = str_replace(" ","%20",$value->get_path_from_git_with_name());
 
+        $fileExploded = explode(".", $encode_path);
+        $extension = end($fileExploded);
+
+        //$avatar = "<img src='".$imgSrc."' class='circle'>"
+        $srcImage = "/static/FileTable/img/";
+
+        switch($extension) {
+          case "pdf":
+            $avatar = "<i class='material-icons circle red'>picture_as_pdf</i>";
+            break;
+          case "md":
+            $srcImage .= "markdown.png";
+            $avatar = "<img src='".$srcImage."' class='circle'>";
+            break;
+          case "html":
+            $avatar = "<i class='material-icons circle red'>code</i>";
+            break;
+          case "tex":
+            $srcImage .= "tex.png";
+            $avatar = "<img src='".$srcImage."' class='circle'>";
+            break;
+          default:
+            $avatar = "<i class='material-icons circle grey'>description</i>";
+        }
+
         echo '<li class="collection-item avatar clickable-file-or-folder">';
 
         if (!$value->is_dir()) {
             echo '<a target="_blank" href='.base_url('FileTable/downloadFile').$slashOrNot.$encode_path.'>';
-            echo "<i class='material-icons circle green'>description</i>";
+            echo $avatar;
             echo "<span class='title'>".$value->get_name()."</span>";
         } else {
             echo '<a href='.base_url($urlMethode).$slashOrNot.$encode_path.'>';

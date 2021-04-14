@@ -3,6 +3,8 @@
 <?= $this->section('content') ?>
 
   <?= $breadcrumb ?>
-  
+
     <?= $fileTable ?>
+
+    <?= $toolbar ?>
 <?= $this->endSection() ?>

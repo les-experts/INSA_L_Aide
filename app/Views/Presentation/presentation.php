@@ -6,7 +6,7 @@
         <img class="logo_iti" src="/static/Presentation/img/iti_logo_no_bg.png"/>
     </div>
 
-    <div class="row">
+    <div class="row row-text-presentation">
       <div class="col s12">
         <div class="row center">
           <h3>Pourquoi INSAled ?</h3>
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row row-text-presentation">
       <div class="col s12">
         <div class="row center">
           <h3>INSAled, une plateforme d'aide par les élèves pour les élèves</h3>
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row row-text-presentation">
       <div class="col s12">
         <div class="row center">
           <h3>Comment contribuer ?</h3>
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div class="row center">
+    <div class="row center btn-return-nav">
       <a class="waves-effect light-green btn" href="/Home/index"><i class="material-icons right">arrow_forward</i>Aller vers la page de navigation</a>
     </div>
 

@@ -13,3 +13,14 @@ p {
   text-align : justify;
   text-justify : inter-word;
 }
+
+@media (min-width: 600px) {
+    .row-text-presentation {
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
+
+    .btn-return-nav {
+      margin-bottom : 5vh;
+    }
+}

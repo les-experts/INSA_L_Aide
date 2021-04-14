@@ -1,0 +1,9 @@
+.toolbar-btn {
+  bottom : 60px;
+}
+
+@media (max-width : 600px) {
+  .toolbar-btn {
+    bottom : 30px;
+  }
+}
