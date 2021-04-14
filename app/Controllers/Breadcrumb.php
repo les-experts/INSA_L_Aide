@@ -16,7 +16,7 @@ class Breadcrumb extends BaseController
 	public function getCss(){
 		return array(
 		"static/Breadcrumb/css/breadcrumb.css",
-		"static/Materialize/css/materialize.min.css");
+		"static/_Materialize/css/materialize.min.css");
 	}
 
 	public function getJS(){

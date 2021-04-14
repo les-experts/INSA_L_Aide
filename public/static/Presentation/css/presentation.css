@@ -1,0 +1,15 @@
+@import url("/static/global.css");
+
+.logo_iti {
+  width: 200px;
+  margin: 20px;
+}
+
+.row-logo {
+  margin-bottom : 0px;
+}
+
+p {
+  text-align : justify;
+  text-justify : inter-word;
+}

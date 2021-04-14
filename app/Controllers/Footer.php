@@ -12,7 +12,7 @@ class Footer extends BaseController
 	public function getCss(){
 		return array(
 			"static/Footer/css/footer.css",
-			"static/Materialize/css/materialize.min.css"
+			"static/_Materialize/css/materialize.min.css"
 		);
 	}
 

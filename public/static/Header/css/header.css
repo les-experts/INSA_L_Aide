@@ -12,13 +12,13 @@ nav ul.right li {
     height: 100%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 600px) {
   .search-module {
     width: 80vw;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 600px) {
   .search-module {
     width: 50vw;
   }

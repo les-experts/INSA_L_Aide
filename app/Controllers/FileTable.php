@@ -58,8 +58,8 @@ class FileTable extends BaseController
 
 	public function getCss(){
 		return array(
-			"static/Materialize/css/icon.css",
-			"static/Materialize/css/materialize.min.css"
+			"static/_Materialize/css/icon.css",
+			"static/_Materialize/css/materialize.min.css"
 		);
 	}
 

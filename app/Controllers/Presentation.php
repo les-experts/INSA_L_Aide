@@ -17,9 +17,9 @@ class Presentation extends BaseController
 		$breadcrumb_html = $breadcrumb_object->getView($path);
 
 		$css = array(
-			"static/Presentation/presentation.css",
-			"static/Materialize/css/icon.css",
-			"static/Materialize/css/materialize.min.css");
+			"static/Presentation/css/presentation.css",
+			"static/_Materialize/css/icon.css",
+			"static/_Materialize/css/materialize.min.css");
 
         $data["cssLink"] = array_merge($fileTable_css, $breadcrumb_css, $css);
         $data["fileTable"] = $fileTable_html;

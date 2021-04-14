@@ -20,7 +20,6 @@
             $cssLink = $header_css;
           }
 
-
           /* Defining variables relative to footer, used later in the layout */
           $footer_object = new Footer();
   				$footer_css = $footer_object->getCss();
@@ -65,6 +64,8 @@
           $jsLink = $header_js;
           $jsLink = array_merge($jsLink, $footer_js);
         }
+
+        $jsLink = Head::parseJs($jsLink);
 
         if(isset($jsLink)){
             foreach ($jsLink as $value) {
