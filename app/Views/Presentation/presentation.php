@@ -56,7 +56,7 @@
     </div>
 
     <div class="row center btn-return-nav">
-      <a class="waves-effect light-green btn" href="/Home/index"><i class="material-icons right">arrow_forward</i>Aller vers la page de navigation</a>
+      <a class="waves-effect light-green btn" target="_blank" href="https://gitlab.insa-rouen.fr/insaled/insaled_main_repo"><i class="material-icons right">arrow_forward</i>Aller vers le projet Gitlab</a>
     </div>
 
 
