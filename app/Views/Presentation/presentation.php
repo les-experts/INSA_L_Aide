@@ -41,8 +41,7 @@
     <div class="row row-text-presentation">
       <div class="col s12">
         <div class="row center">
-          <h4>Comment contribuer ?</h4>
-
+          <h4>Une plateforme collaborative</h4>
         </div>
 
         <div class="row row-with-text">
@@ -56,7 +55,7 @@
     </div>
 
     <div class="row center btn-return-nav">
-      <a class="waves-effect light-green btn" target="_blank" href="https://gitlab.insa-rouen.fr/insaled/insaled_main_repo"><i class="material-icons right">arrow_forward</i>Aller vers le projet Gitlab</a>
+      <a class="waves-effect light-green btn" href="/contribuer"><i class="material-icons right">arrow_forward</i>Comment contribuer ?</a>
     </div>
 
 

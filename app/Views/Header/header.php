@@ -5,7 +5,8 @@
 
         <ul class="right hide-on-med-and-down">
           <li class="search-module"><?= view_cell('\App\Controllers\Search::search_bar') ?></li>
-          <li><a href="<?= base_url("/participer") ?>">Contribuez au projet !</a></li>
+          <li><a href="<?= base_url("/presentation") ?>">Presentation</a></li>
+          <li><a href="<?= base_url("/contribuer") ?>">Contribuez au projet !</a></li>
         </ul>
 
         <ul class="right hide-on-large-only">
@@ -16,5 +17,6 @@
 
 <ul class="sidenav" id="mobile-header">
   <li><a href="/">Accueil</a></li>
-  <li><a href="<?= base_url("/participer") ?>">Contribuez au projet !</a></li>
+  <li><a href="<?= base_url("/presentation") ?>">Presentation</a></li>
+  <li><a href="<?= base_url("/contribuer") ?>">Contribuez au projet !</a></li>
 </ul>
