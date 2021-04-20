@@ -47,7 +47,8 @@
           vous souhaitez créer un sous-répertoire afin de placer votre fichier car le chapitre le concernant n'en a pas encore, vous pouvez également (en faisant attention de bien le nommer).
           Le nom des fichiers déposés a une réelle importance car la recherche (via la barre de recherche en haut du site) est faite à partir des titres des documents, veuillez donc mettre un 
           maximum de mots clés au sein de celui-ci.
-          Exemple : je dispose d'une fiche
+          Exemple : je dispose d'une fiche sur Choleskey en Ananum. Je clique donc sur le dossier "ANANUM" sur la page d'accueil du site. Je vois désormais tous les dossiers disponibles 
+          pour cette matière. Le dossier "Cholesky" existe déja donc je clique dessus, on arrive donc sur la page sur laquelle on va devoir déposer notre fiche. 
         </div>
       </div>
     </div>
