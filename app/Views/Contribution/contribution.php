@@ -46,19 +46,69 @@
           Une fois que l'administrateur vous a accepté, vous pouvez désormais déposer des fichiers. Pour cela, placez-vous dans le dossier correspondant à votre fichier et ajouter le. Si
           vous souhaitez créer un sous-répertoire afin de placer votre fichier car le chapitre le concernant n'en a pas encore, vous pouvez également (en faisant attention de bien le nommer).
           Le nom des fichiers déposés a une réelle importance car la recherche (via la barre de recherche en haut du site) est faite à partir des titres des documents, veuillez donc mettre un 
-          maximum de mots clés au sein de celui-ci.
-          Exemple : je dispose d'une fiche sur Choleskey en Ananum. Je clique donc sur le dossier "ANANUM" sur la page d'accueil du site. Je vois désormais tous les dossiers disponibles 
-          pour cette matière. Le dossier "Cholesky" existe déja donc je clique dessus, on arrive donc sur la page sur laquelle on va devoir déposer notre fiche. 
+          maximum de mots clés au sein de celui-ci. <br/><br/>
+          <b>Exemple :</b> je dispose d'une fiche sur Choleskey en Ananum. Je clique donc sur le dossier "ANANUM" sur la page d'accueil du site. Je vois désormais tous les dossiers disponibles 
+          pour cette matière. Le dossier "Cholesky" existe déja donc je clique dessus, on arrive donc sur la page sur laquelle on va devoir déposer notre fiche. Au niveau 
+          de l'affichage de l'arborescence de dossier, un "+" va apparaitre (pointillés rouges sur la photo suivante). En cliquant dessus, une liste de choix va se proposer à vous. 
         </div>
       </div>
     </div>
 
-    <div class="row center btn-return-nav">
-      <a class="waves-effect light-green btn" target="_blank" href="https://gitlab.insa-rouen.fr/insaled/insaled_main_repo"><i class="material-icons right">arrow_forward</i>Aller vers le projet Gitlab</a>
+    <div class="row center row-logo">
+        <img class="add_file" src="/static/Contribution/img/add_file.png"/>
     </div>
 
+    <div class="row row-text-presentation">
+      <div class="col s12">
+        <div class="row row-with-text">
+          Sur cette liste, l'option qui nous intéresse est "upload file" (pointillés rouges sur la photo suivante), qui va nous permettre d'importer un fichier stocké en local. 
+          On peut également créer un fichier directement sur Gitlab (ce qu'on ne conseille pas), ou bien créer un nouveau dossier.
+        </div>
+      </div>
+    </div>
 
+    <div class="row center row-logo">
+        <img class="add_file" src="/static/Contribution/img/add_file2.png"/>
+    </div>
 
+    <div class="row row-text-presentation">
+      <div class="col s12">
+        <div class="row row-with-text">
+          En ayant choisi l'option "upload file", une fenêtre va s'afficher. Elle va nous permettre de sélectionner un fichier local. Pour cela, vous pouvez faire un glisser/deposer 
+          sur la zone en pointillés ou bien cliquer sur "click to upload" (pointillés rouges sur la photo suivante). 
+        </div>
+      </div>
+    </div>
+
+    <div class="row center row-logo">
+        <img class="add_file" src="/static/Contribution/img/add_file3.png"/>
+    </div>
+
+    <div class="row row-text-presentation">
+      <div class="col s12">
+        <div class="row row-with-text">
+          Dans notre cas, nous avons choisi d'importer le fichier "fiche_cholesky_algorithme.md". On peut rajouter un message de commit dans le cadre prévu (pointillés rouges sur la photo suivante),
+           permettant d'identifier l'action que nous avons réalisé lors de cette mise à jour du Git (mais ce n'est pas obligatoire, laisser le texte par défaut est possible). La dernière étape est d'appuyer 
+           sur le bouton "Upluoad file" en bas à gauche (pointillés bleus sur la photo suivante). Cela permettra de valider l'importation du fichier dans le Git.
+        </div>
+      </div>
+    </div>
+
+    <div class="row center row-logo">
+        <img class="add_file" src="/static/Contribution/img/add_file4.png"/>
+    </div>
+
+    <div class="row row-text-presentation">
+      <div class="col s12">
+        <div class="row row-with-text">
+          Comme vous pouvez le voir, le fichier a bien été importé. Merci d'avoir contribué !
+        </div>
+      </div>
+    </div>
+
+    <div class="row center row-logo">
+        <img class="add_file" src="/static/Contribution/img/add_file5.png"/>
+    </div>
 
 
 
