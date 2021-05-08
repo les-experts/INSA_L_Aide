@@ -8,10 +8,3 @@
     <li><a class="btn-floating red darken tooltipped" data-position="top" data-tooltip="Reporter une erreur"><i class="material-icons">report</i></a></li>
   </ul>
 </div>
-
-<script>
-  var Globals = <?php echo json_encode(array(
-    'pathToManage' => $pathToManage,
-    'baseUrl' => base_url()
-  )); ?>;
-</script>

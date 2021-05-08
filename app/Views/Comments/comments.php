@@ -7,13 +7,25 @@
         </div>
 
         <div class="row">
-            <form class="col s12" method="POST" action="<?php echo base_url().'/comments'; ?>">
+            <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input name="newComment" id="new_comment" type="text" class="validate">
-                        <label for="new_comment">Ecrivez un commentaire ! </label>
+                        <input name="pseudo" id="pseudo" type="text" class="validate">
+                        <label for="pseudo">Choisissez un pseudo</label>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="newComment" id="newComment" type="text" class="validate">
+                        <label for="newComment">Ecrivez un commentaire ! </label>
+                    </div>
+                </div>
+
+                <input name="pathToManage" id="pathToManage" type="text" value="<?= $pathToManage ?>"  style="display: none;">
+
+                <input type="submit">
+
             </form>
         </div>
 
@@ -24,3 +36,10 @@
 
     </div>
 </div>
+
+<script>
+  var Globals = <?php echo json_encode(array(
+    'pathToManage' => $pathToManage,
+    'baseUrl' => base_url()
+  )); ?>;
+</script>

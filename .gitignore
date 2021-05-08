@@ -132,3 +132,4 @@ nb-configuration.xml
 #Repo git
 writable/debugbar/
 public/RepositoryGit/
+writable/insaled.db

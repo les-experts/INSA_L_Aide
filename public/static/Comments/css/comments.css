@@ -1,0 +1,40 @@
+.toastError {
+    background-color : #e57373;
+}
+
+.toast {
+    justify-content: center;
+    right: 5vw;
+    width : 20vw;
+    position: fixed;
+    color : white;
+}
+
+.toastSuccess {
+    background-color : #66bb6a;
+}
+
+#commentsContainer {
+    display: none;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: var(--third-color);
+    height: 100%;
+    width: 30vw;
+    z-index: 10;
+    overflow: scroll;
+    
+    -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
+    scrollbar-width: none;  /* hide scrollbar Firefox */
+  }
+
+  #commentsContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* à changer, il faut réduire et ne pas appliquer hidden sur tout le html */
+  html { 
+    overflow-x: hidden;
+  }
+

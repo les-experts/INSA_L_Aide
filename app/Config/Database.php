@@ -32,11 +32,12 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
+		'hostname' => '',
 		'username' => '',
 		'password' => '',
-		'database' => '',
-		'DBDriver' => 'MySQLi',
+		'database' => ROOTPATH.'/writable/insaled.db',
+//		'DBDriver' => 'MySQLi',
+		'DBDriver' => 'SQLite3',
 		'DBPrefix' => '',
 		'pConnect' => false,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
