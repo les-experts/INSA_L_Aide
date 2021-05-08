@@ -1,16 +1,24 @@
-@import url("/static/global.css");
+:root {
+  --main-color: #6376ab;
+  --second-color: #25459c;
+
+  --s: 0px;
+  --m: 600px;
+  --l: 992px;
+  --xl: 1200px;
+}
 
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding : 0 !important;
+  padding: 0 !important;
   height: 40px;
   z-index: 2;
 }
 
 footer a {
-  color : inherit;
+  color: inherit;
 }
 
 footer.page-footer {

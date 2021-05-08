@@ -7,7 +7,7 @@ use App\Models\GitFile;
 
 class GitFileModel extends Model
 {
-    public static $get_repository_path = "../writable/RepositoryGit/";
+    public static $get_repository_path = "static/RepositoryGit/"; // path a partir de public
 
     public function getFiles($path = false)
     {

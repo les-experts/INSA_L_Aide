@@ -1,4 +1,12 @@
-@import url("/static/global.css");
+:root {
+  --main-color: #6376ab;
+  --second-color: #25459c;
+
+  --s: 0px;
+  --m: 600px;
+  --l: 992px;
+  --xl: 1200px;
+}
 
 .clean {
   background-color: transparent;
@@ -6,12 +14,12 @@
 }
 
 .breadcrumb {
-  color : grey;
-  height : 100%;
+  color: grey;
+  height: 100%;
 }
 
 .breadcrumb:before {
-  color : grey;
+  color: grey;
   display: inline;
 }
 
