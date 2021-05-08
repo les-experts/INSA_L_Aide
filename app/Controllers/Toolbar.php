@@ -27,7 +27,7 @@ class Toolbar extends BaseController
 		return array(
 			"static/Toolbar/js/toolbar.js",
 			"static/_Materialize/js/jquery-3.6.0.js",
-      "static/_Materialize/js/materialize.min.js"
+      		"static/_Materialize/js/materialize.min.js"
 		);
 	}
 

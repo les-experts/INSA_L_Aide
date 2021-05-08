@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/presentation', 'Presentation::getView');
 $routes->get('/contribuer', 'Contribution::getView');
+$routes->post('/comments', 'Comments::getComments');
 
 /*
  * --------------------------------------------------------------------

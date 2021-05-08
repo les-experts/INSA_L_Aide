@@ -1,12 +1,11 @@
 @import url("/static/global.css");
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   padding : 0 !important;
-  height: 40px;
-  z-index: 2;
+  height: 50px;
 }
 
 footer a {
@@ -17,6 +16,13 @@ footer.page-footer {
   background-color: var(--main-color);
 }
 
-.container {
-  margin-bottom: 40px;
+/* to keep the footer at the bottom of the page */
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+#globalContainer {
+  padding-bottom: 50px;
 }

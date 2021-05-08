@@ -1,3 +1,5 @@
+@import url("/static/global.css");
+
 .toolbar-btn {
   bottom : 60px;
 }
@@ -6,4 +8,20 @@
   .toolbar-btn {
     bottom : 30px;
   }
+}
+
+#commentsContainer {
+  display: none;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  background-color: var(--third-color);
+  height: 100%;
+  width: 30vw;
+  z-index: 10;
+}
+
+/* à changer, il faut réduire et ne pas appliquer hidden sur tout le html */
+html { 
+  overflow-x: hidden;
 }

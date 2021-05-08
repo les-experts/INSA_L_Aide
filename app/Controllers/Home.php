@@ -21,14 +21,20 @@ class Home extends BaseController
 		$toolbar_object = new Toolbar($path);
 		$toolbar_css = $toolbar_object->getCss();
 		$toolbar_js = $toolbar_object->getJS();
-		$toolbar_html = $toolbar_object->getView($path);
+		$toolbar_html = $toolbar_object->getView();
 
-		$data["cssLink"] = array_merge($fileTable_css, $breadcrumb_css, $toolbar_css);
-		$data["jsLink"] = array_merge($fileTable_js, $breadcrumb_js, $toolbar_js);
+		$commentaires_object = new Comments();
+		$commentaires_css = $commentaires_object->getCss();
+		$commentaires_js = $commentaires_object->getJS();
+		$commentaires_html = $commentaires_object->getView($path);
+
+		$data["cssLink"] = array_merge($fileTable_css, $breadcrumb_css, $toolbar_css, $commentaires_css);
+		$data["jsLink"] = array_merge($fileTable_js, $breadcrumb_js, $toolbar_js, $commentaires_js);
 
 		$data["fileTable"] = $fileTable_html;
 		$data["breadcrumb"] = $breadcrumb_html;
 		$data["toolbar"] = $toolbar_html;
+		$data["commentaires"] = $commentaires_html;
 
 		return view("Home/index", $data);
 	}

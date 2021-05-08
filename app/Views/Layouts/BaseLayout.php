@@ -48,7 +48,7 @@
 
         <?= $header_object->getView() ?>
 
-        <div class="container">
+        <div id="globalContainer" class="container">
           <?= $this->renderSection('content') ?>
         </div>
 

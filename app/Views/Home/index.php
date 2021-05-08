@@ -7,4 +7,6 @@
     <?= $fileTable ?>
 
     <?= $toolbar ?>
+
+    <?= $commentaires ?>
 <?= $this->endSection() ?>
