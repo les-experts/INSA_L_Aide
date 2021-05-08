@@ -28,7 +28,7 @@ class GitFileModel extends Model
         }
 
         $gitFileList = array();
-        foreach ($paths as $key => $value) {
+        foreach ($paths as $value) {
             $node = explode("/",$value);
             do {
                 $name = array_pop($node);

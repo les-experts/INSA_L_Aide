@@ -4,7 +4,8 @@
 
   <?= $breadcrumb ?>
 
-    <?= $fileTable ?>
+  <?= $fileTable ?>
 
-    <?= $toolbar ?>
+  <?= $toolbar ?>
+    
 <?= $this->endSection() ?>
