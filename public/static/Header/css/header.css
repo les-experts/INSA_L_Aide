@@ -1,15 +1,23 @@
-@import url("/static/global.css");
+:root {
+  --main-color: #6376ab;
+  --second-color: #25459c;
+
+  --s: 0px;
+  --m: 600px;
+  --l: 992px;
+  --xl: 1200px;
+}
 
 nav {
-  background-color : var(--main-color);
+  background-color: var(--main-color);
 }
 
 nav ul.right {
-    height: 100%;
+  height: 100%;
 }
 
 nav ul.right li {
-    height: 100%;
+  height: 100%;
 }
 
 @media (max-width: 600px) {

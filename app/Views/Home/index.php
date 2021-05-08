@@ -4,9 +4,10 @@
 
   <?= $breadcrumb ?>
 
-    <?= $fileTable ?>
+  <?= $fileTable ?>
 
     <?= $toolbar ?>
 
     <?= $commentaires ?>
+
 <?= $this->endSection() ?>

@@ -44,7 +44,7 @@
         echo '<li class="collection-item avatar clickable-file-or-folder">';
 
         if (!$value->is_dir()) {
-            echo '<a target="_blank" href='.base_url('FileTable/downloadFile').$slashOrNot.$encode_path.'>';
+            echo '<a href='.base_url('FileController/index').$slashOrNot.$encode_path.'>';
             echo $avatar;
             echo "<span class='title'>".$value->get_name()."</span>";
         } else {

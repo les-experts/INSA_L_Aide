@@ -11,8 +11,9 @@ class Header extends BaseController
 
 	public function getCss(){
 		return array(
-			"static/Header/css/header.css",
-			"static/_Materialize/css/materialize.min.css"
+			"static/_Materialize/css/materialize.min.css",
+			"static/_Materialize/css/icon.css",
+			"static/Header/css/header.css"
 		);
 	}
 

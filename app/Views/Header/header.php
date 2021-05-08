@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-wrapper">
-        <a href="/" class="hide-on-med-and-down brand-logo" >INSAled</a>
+        <a href="<?=base_url()?>" class="hide-on-med-and-down brand-logo" >INSAled</a>
         <a href="#" data-target="mobile-header" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <ul class="right hide-on-med-and-down">

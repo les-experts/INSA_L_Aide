@@ -1,12 +1,21 @@
-@import url("/static/global.css");
+:root {
+  --main-color: #6376AB;
+  --second-color: #25459c;
+  --third-color: #bfc8e3;
 
-.toolbar-btn {
-  bottom : 60px;
+  --s: 0px;
+  --m: 600px;
+  --l: 992px;
+  --xl: 1200px;
 }
 
-@media (max-width : 600px) {
+.toolbar-btn {
+  bottom: 60px;
+}
+
+@media (max-width: 600px) {
   .toolbar-btn {
-    bottom : 30px;
+    bottom: 30px;
   }
 }
 

@@ -1,35 +1,33 @@
-@import url("/static/global.css");
-
 .logo_iti {
   width: 200px;
   margin: 20px;
 }
 
 .row-logo {
-  margin-bottom : 0px;
+  margin-bottom: 0px;
 }
 
 .row-text-presentation {
-  margin-bottom : 0px;
+  margin-bottom: 0px;
 }
 
 .row-with-text {
-  margin-bottom : 0px;
-  text-align : justify;
-  text-justify : inter-word;
+  margin-bottom: 0px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .btn-return-nav {
-  margin-top : 50px;
+  margin-top: 50px;
 }
 
 @media (min-width: 600px) {
-    .row-text-presentation {
-      margin-left: 10vw;
-      margin-right: 10vw;
-    }
+  .row-text-presentation {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 
-    .btn-return-nav {
-      margin-bottom : 5vh;
-    }
+  .btn-return-nav {
+    margin-bottom: 5vh;
+  }
 }

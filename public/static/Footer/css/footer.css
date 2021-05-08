@@ -1,4 +1,12 @@
-@import url("/static/global.css");
+:root {
+  --main-color: #6376ab;
+  --second-color: #25459c;
+
+  --s: 0px;
+  --m: 600px;
+  --l: 992px;
+  --xl: 1200px;
+}
 
 footer {
   position: absolute;
@@ -9,7 +17,7 @@ footer {
 }
 
 footer a {
-  color : inherit;
+  color: inherit;
 }
 
 footer.page-footer {
