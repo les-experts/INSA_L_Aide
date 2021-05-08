@@ -4,9 +4,16 @@ namespace App\Controllers;
 
 class Toolbar extends BaseController
 {
+	private String $pathToManage;
+	
+	function __construct(String $pathToManage = "/") {
+		$this->pathToManage = $pathToManage;
+	}
+
 	public function getView()
 	{
-		return view('Toolbar/toolbar.php');
+		$data["pathToManage"] = $this->pathToManage;
+		return view('Toolbar/toolbar.php', $data);
 	}
 
 	public function getCss(){
