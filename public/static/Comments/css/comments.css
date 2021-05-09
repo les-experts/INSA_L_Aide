@@ -1,11 +1,21 @@
+:root {
+  --main-color: #6376AB;
+  --second-color: #25459c;
+  --third-color: #bfc8e3;
+  --fourth-color: #8197da;
+
+  --s: 0px;
+  --m: 600px;
+  --l: 992px;
+  --xl: 1200px;
+}
+
 .toastError {
-    background-color : #e57373;
+    background-color : #c52a2a;
 }
 
 .toast {
     justify-content: center;
-    right: 5vw;
-    width : 20vw;
     position: fixed;
     color : white;
 }
@@ -14,27 +24,204 @@
     background-color : #66bb6a;
 }
 
+.input-field-pseudo {
+  margin: 0;
+}
+
+.input-field-commentaire {
+  margin: 0;
+}
+
+.commentsToggler {
+  position: fixed;
+  top: 50%;
+  right: -20px;
+  background-color: var(--main-color);
+}
+
+.commentsToggler:hover {
+  background-color: var(--second-color);
+}
+
+.moveOut {
+  animation-name: slideout;
+  animation-duration: 0.48s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.moveIn {
+  animation-name: slidein;
+  animation-duration: 0.48s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+
 #commentsContainer {
-    display: none;
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    background-color: var(--third-color);
-    height: 100%;
-    width: 30vw;
-    z-index: 10;
-    overflow: scroll;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  background-color: var(--third-color);
+  height: 100%;
+  z-index: 10;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
+  scrollbar-width: none;  /* hide scrollbar Firefox */
+  display: none;
+}
+
+#commentsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #commentsContainer {
+    width: 350px;
+  }
+
+  .toast {
+    width : 250px;
+    right: 50px;
+  }
+
+  @keyframes slideout {
+
+    0% {
+      right: 330px;
+    }
+    100% {
+      right: -20px;
+    }
     
-    -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
-    scrollbar-width: none;  /* hide scrollbar Firefox */
   }
 
-  #commentsContainer::-webkit-scrollbar {
-    display: none;
+  @keyframes slidein {
+
+    0% {
+      right: -20px;
+    }
+    100% {
+      right: 330px;
+    }
+    
   }
-  
-  /* à changer, il faut réduire et ne pas appliquer hidden sur tout le html */
-  html { 
-    overflow-x: hidden;
+}
+
+@media (min-width: 600px) {
+  #commentsContainer {
+    width: 600px;
   }
 
+  .toast {
+    width : 400px;
+    right: 100px;
+  }
+
+
+  @keyframes slideout {
+
+    0% {
+      right: 580px;
+    }
+    100% {
+      right: -20px;
+    }
+    
+  }
+
+  @keyframes slidein {
+
+    0% {
+      right: -20px;
+    }
+    100% {
+      right: 580px;
+    }
+    
+  }
+
+}
+
+
+.rowTitre {
+  font-size: 30px;
+  margin-bottom: 0;
+  color: var(--main-color);
+}
+
+.rowPath {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: var(--fourth-color);
+}
+
+.columnContent {
+  width: 50px;
+}
+
+.rowComment * {
+  margin: 0;
+}
+
+.rowNoComment {
+  color : var(--main-color);
+  height: 50vh;
+}
+
+.rowAuthor {
+  font-size: 20;
+  color: var(--main-color);
+}
+
+.spanPseudo {
+  color: var(--main-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* submit button trouvé sur un code snippet*/
+.buttonSubmit {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--main-color);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  vertical-align:middle;
+}
+
+.buttonSubmit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonSubmit span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonSubmit:hover span {
+  padding-right: 25px;
+}
+
+.buttonSubmit:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.buttonSubmit:focus {
+  background-color: var(--second-color);
+}

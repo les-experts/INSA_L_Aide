@@ -1,14 +1,3 @@
-:root {
-  --main-color: #6376AB;
-  --second-color: #25459c;
-  --third-color: #bfc8e3;
-
-  --s: 0px;
-  --m: 600px;
-  --l: 992px;
-  --xl: 1200px;
-}
-
 .toolbar-btn {
   bottom: 60px;
 }

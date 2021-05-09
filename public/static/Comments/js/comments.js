@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   function getAndWriteComs() {
     $.ajax({
       'type': 'GET',
@@ -12,17 +13,32 @@ $(document).ready(function () {
     });
   }
 
-  getAndWriteComs();
+  function moveCommentToggler() {
+    var toggler = $(".commentsToggler");
 
-  $("#commentsToggle").click(function () {
+    if (toggler.hasClass("moveIn")) {
+      toggler.removeClass("moveIn")
+      toggler.addClass("moveOut");
+      toggler.addClass("pulse");
+      toggler.attr("data-tooltip","Afficher les commentaires");
 
-    $("#commentsContainer").toggle("slide", { direction: "right" }, 300, complete = function () {
+    } else {
+      toggler.removeClass("moveOut")
+      toggler.addClass("moveIn");
+      toggler.removeClass("pulse");
+      toggler.attr("data-tooltip","Cacher les commentaires");
+    }
+  }
+
+  $(".commentsToggler").click(function () {
+
+    moveCommentToggler();
+
+    $("#commentsContainer").toggle("slide", { direction: "right" }, 500, complete = function () {
       getAndWriteComs();
     });
 
-  });
-
-  $("#commentsToggle").click(); //pour toggle par défaut, à enlever si besoin
+  });  
 
   $("form").submit(function (event) {
     var formData = {
@@ -42,13 +58,18 @@ $(document).ready(function () {
         M.toast({html: 'Ajout commentaire échoué', classes: 'toastError rounded center-align'});
       }else {
         M.toast({html: 'Commentaire ajouté avec succès', classes: 'toastSuccess rounded center-align'});
+        $("#newComment").val("");
+        $("label[for='newComment']").removeClass("active");
       }
 
       getAndWriteComs();
-      
+
     });
     
     event.preventDefault();
 
   });
+
+  $('.tooltipped').tooltip();
+
 })

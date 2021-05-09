@@ -8,4 +8,8 @@
         src="<?= base_url($file->get_full_path()) ?>">
     </iframe>
 
+    <?= $toolbar ?>
+
+    <?= $commentaires ?>
+
 <?= $this->endSection() ?>
