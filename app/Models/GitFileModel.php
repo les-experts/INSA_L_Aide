@@ -9,19 +9,19 @@ class GitFileModel extends Model
 {
     public static $get_repository_path = "RepositoryGit/"; // path a partir de public
 
-    public function getFiles($path = false)
+    public function getDirectoryContent($path = false)
     {
 		$files = scandir(self::$get_repository_path.$path);
         $gitFileList = array();
-        foreach ($files as $key => $value) {
-            $gitFileList[] = new GitFile($value,$path);
+        foreach ($files as $file) {
+            $gitFileList[] = new GitFile($file,$path);
         }
         return $gitFileList;
     }
 
     public function getFile($paths = FALSE){
         if($paths === FALSE){
-            throw new Exception("Il n'y a aucun paramètres");
+            throw new \Exception("Il n'y a aucun paramètres");
         }
         if(!is_array($paths)){
             $paths = array($paths);

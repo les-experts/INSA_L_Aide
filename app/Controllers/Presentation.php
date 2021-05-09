@@ -10,7 +10,7 @@ class Presentation extends BaseController
 
         $fileTable_object = new FileTable();
         $fileTable_css = $fileTable_object->getCss();
-		$fileTable_html = $fileTable_object->view_dir($path,"Home/index");
+		$fileTable_html = $fileTable_object->view_dir($path,"Home/getView");
 
 		$breadcrumb_object = new Breadcrumb();
 		$breadcrumb_css = $breadcrumb_object->getCss();
@@ -25,7 +25,7 @@ class Presentation extends BaseController
         $data["fileTable"] = $fileTable_html;
 		$data["breadcrumb"] = $breadcrumb_html;
 
-        return view("Presentation/presentation",$data);
+        return view("Presentation/presentation.php",$data);
 
 	}
 

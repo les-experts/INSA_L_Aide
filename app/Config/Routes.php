@@ -32,11 +32,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
 $routes->get('/presentation', 'Presentation::getView');
 $routes->get('/contribuer', 'Contribution::getView');
 $routes->get('/comments', 'Comments::getComments');
 $routes->post('/comments/new', 'Comments::addComment');
+$routes->post('/search', 'Search::getViewResults');
+$routes->get('/', 'Home::getView');
 
 /*
  * --------------------------------------------------------------------

@@ -8,19 +8,14 @@ use App\Models\GitFileModel;
  */
 class FileController extends BaseController
 {
-	public function index($path){
+    public function getView($path){
+		
 		$path = implode("/",func_get_args());
-        echo $this->view_file($path);
-    }
 
-    public function view_file($path){
 		$model = new GitFileModel();
 		$files = $model->getFile($path);
 		$file = $files[0];
-		return $this->view($file);
-	}
 
-    public function view($file){
 		$breadcrumb_object = new Breadcrumb();
 		$breadcrumb_css = $breadcrumb_object->getCss();
 		$breadcrumb_js = $breadcrumb_object->getJS();
@@ -44,8 +39,7 @@ class FileController extends BaseController
 		$data["toolbar"] = $toolbar_html;
 		$data["commentaires"] = $commentaires_html;
 		
-		
-		return view("FileController/index",$data);
+		return view("FileController/fileController.php",$data);
 	}
 
 	protected function getCss(){

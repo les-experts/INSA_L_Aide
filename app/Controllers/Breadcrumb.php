@@ -9,7 +9,7 @@ class Breadcrumb extends BaseController
 {
 	public function getView($pathToRepresent)
 	{
-    $data["pathToRepresent"] = $pathToRepresent;
+    	$data["pathToRepresent"] = $pathToRepresent;
 		return view('FileTable/Breadcrumb.php', $data);
 	}
 

@@ -1,0 +1,14 @@
+.aucunResultatContainer {
+    height: 80vh;
+    text-align: center;
+}
+
+.aucunResultat {
+    color: #6376ab;
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+
+}

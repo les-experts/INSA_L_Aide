@@ -23,7 +23,7 @@
         </div>
 
         <div class="row">
-            <form class="col s12">
+            <form class="formAjoutCommentaire col s12">
                 <div class="row">
                     <div class="input-field input-field-pseudo col s8 offset-s2">
                         <input name="pseudo" id="pseudo" type="text" class="validate">

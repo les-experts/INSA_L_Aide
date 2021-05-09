@@ -22,10 +22,10 @@ class FileTable extends BaseController
 	 * @param string @path le chemin à partir de RepositoryGit vers un fichier
 	 * @return html le code html de la FileTable
 	 */
-	public function view_dir($path,$urlMethode = "FileTable/index"){
+	public function view_dir($path,$urlMethode = "FileTable/getView"){
 
 		$model = new GitFileModel();
-		$files = $model->getFiles($path);
+		$files = $model->getDirectoryContent($path);
 
 		if(!isset($path) || empty($path)){
 			foreach ($files as $key => $value) {
@@ -40,7 +40,7 @@ class FileTable extends BaseController
 				unset($files[$key]);
 			}
 		}
-		return $this->view($files,$urlMethode);
+		return $this->getView($files,$urlMethode);
 	}
 
 	/**
@@ -50,14 +50,15 @@ class FileTable extends BaseController
 	 * @param string les fichiers à représenter
 	 * @return html le code html de la FileTable
 	 */
-	public function view($files,$urlMethode = "FileTable/index"){
+	public function getView($files,$urlMethode = "FileTable/getView"){
 		$data["files"] = $files;
 		$data["urlMethode"] = $urlMethode;
-		return view("FileTable/fileTable",$data);
+		return view("FileTable/fileTable.php",$data);
 	}
 
 	public function getCss(){
 		return array(
+			"static/FileTable/css/fileTable.css",
 			"static/_Materialize/css/icon.css",
 			"static/_Materialize/css/materialize.min.css"
 		);

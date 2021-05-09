@@ -14,7 +14,7 @@ class Search extends BaseController
      * @return html;
      *
      */
-    public function search_bar(){
+    public function getView(){
         return view("Search/SearchBar.php");
     }
 
@@ -26,21 +26,29 @@ class Search extends BaseController
      * @return void
      *
      */
-    public function index(){
+    public function getViewResults(){
 
         $model = new GitFileModel();
 
         $post = $this->request->getPost();
         if(!isset($post['search_pattern']) || empty($post['search_pattern'])){
-			       throw new Exception("Il n'y a aucun paramètres dans Search/index");
+			return "Faudrait rediriger vers la page d'accueil mais jsp comment faire";
         }
-        //$paths = $this->search_by_title("/".$post['search_pattern']."/i");
-        $paths = $this->search_by_content("/".$post['search_pattern']."/i");
+        
+        $paths = $this->search_by_title("/".$post['search_pattern']."/i");
+        //$paths = $this->search_by_content("/".$post['search_pattern']."/i");
         $files = $model->getFile($paths);
 
-        $file_Table_controleur = new FileTable();
-        $file_table = $file_Table_controleur->view($files,"Home/index");
-        echo (new Home())->displayFileTable($file_table);
+        $fileTable_object = new FileTable();
+        $fileTable_html = $fileTable_object->getView($files,"Home/getView");
+        $fileTable_css = $fileTable_object->getCss();
+
+        //$fileTable = (new Home())->getViewByFileTable($file_table);
+
+        $data["fileTable"] = $fileTable_html;
+		$data["cssLink"] = $fileTable_css;
+
+		return view("Home/home.php", $data);
     }
 
     /**

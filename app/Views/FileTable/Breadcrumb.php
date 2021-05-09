@@ -6,7 +6,7 @@
          <?php
            foreach ($breadscrumbContentExploded as $key => $breadscrumbElement) {
                if ($key != count($breadscrumbContentExploded)-1 ) {
-                 $link = base_url("/Home/index/".explode("/".$breadscrumbContentExploded[$key+1],$pathToRepresent)[0]);
+                 $link = base_url("/Home/getView/".explode("/".$breadscrumbContentExploded[$key+1],$pathToRepresent)[0]);
                  echo "<a href='$link' class='breadcrumb'>$breadscrumbElement</a>";
                } else {
                  echo "<a href='#!' class='breadcrumb'>$breadscrumbElement</a>";

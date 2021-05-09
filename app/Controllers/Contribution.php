@@ -10,7 +10,7 @@ class Contribution extends BaseController
 
         $fileTable_object = new FileTable();
         $fileTable_css = $fileTable_object->getCss();
-		$fileTable_html = $fileTable_object->view_dir($path,"Home/index");
+		$fileTable_html = $fileTable_object->view_dir($path,"Home/home");
 
 		$breadcrumb_object = new Breadcrumb();
 		$breadcrumb_css = $breadcrumb_object->getCss();

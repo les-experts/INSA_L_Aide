@@ -40,7 +40,7 @@ $(document).ready(function () {
 
   });  
 
-  $("form").submit(function (event) {
+  $(".formAjoutCommentaire").submit(function (event) {
     var formData = {
       pathToManage: $("#pathToManage").val(),
       pseudo: $("#pseudo").val(),
