@@ -35,8 +35,11 @@ class Search extends BaseController
 			return "Faudrait rediriger vers la page d'accueil mais jsp comment faire";
         }
         
+        
         $paths = $this->search_by_title("/".$post['search_pattern']."/i");
         //$paths = $this->search_by_content("/".$post['search_pattern']."/i");
+
+        
         $files = $model->getFiles($paths);
 
         $fileTable_object = new FileTable();
@@ -62,27 +65,44 @@ class Search extends BaseController
         helper('filesystem');
         $git_repository = directory_map(GitFileModel::$get_repository_path);
 
-        function recur($object,$pattern,$prefix = ""){
+        function recur($git_repository,$pattern,$prefix = ""){
             $match = array();
-            if(is_array($object)){
-                foreach ($object as $key => $value) {
+            if(is_array($git_repository)){
+                foreach ($git_repository as $key => $value) {
+
                     if(preg_match($pattern,$key)){
+
                         $pathFile = implode("/",explode("\\",$prefix.$key));
                         $match[] = $pathFile;
                     }
+
                     $res = recur($value,$pattern,$prefix.$key);
                     $match = array_merge($match,$res);
                 }
             }else{
-                if(preg_match($pattern,$object)){
-                    $pathFile = implode("/",explode("\\",$prefix.$object));
+                if(preg_match($pattern,$git_repository)){
+
+                    /* !! quickfix (qui m'a pris 2h à trouver), si on fait pas preg_replace y'a un numéro qui se met devant le
+                        nom du FICHIER, sûrement la clé dans le tableau $git_repository
+
+                        Ici je supprime les chiffres à la fin d'un path
+
+                        PROBLEME : Si un dossier s'appelle "1" par exemple, il peut y avoir des soucis ??
+                        + pas très élégant, faudrait corriger dans l'algo au dessus et faire distinction dossiers/fichiers
+                    */
+                    $prefix = preg_replace("/[0-9]*$/", "", $prefix);
+
+                    $pathFile = implode("/",explode("\\",$prefix.$git_repository));
+
                     $match[] = $pathFile;
                 }
             }
             return $match;
         }
 
-        return recur($git_repository,$pattern);
+        $returned = recur($git_repository,$pattern);
+
+        return $returned ;
     }
 
     public function getCss(){

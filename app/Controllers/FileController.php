@@ -13,7 +13,7 @@ class FileController extends BaseController
 		$path = implode("/",func_get_args());
 
 		$model = new GitFileModel();
-		$files = $model->getFile($path);
+		$files = $model->getFiles($path);
 		$file = $files[0];
 
 		$breadcrumb_object = new Breadcrumb();
