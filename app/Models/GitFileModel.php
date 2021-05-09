@@ -19,7 +19,7 @@ class GitFileModel extends Model
         return $gitFileList;
     }
 
-    public function getFile($paths = FALSE){
+    public function getFiles($paths = FALSE){
         if($paths === FALSE){
             throw new \Exception("Il n'y a aucun paramètres");
         }

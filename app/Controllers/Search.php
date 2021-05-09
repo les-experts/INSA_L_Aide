@@ -37,7 +37,7 @@ class Search extends BaseController
         
         $paths = $this->search_by_title("/".$post['search_pattern']."/i");
         //$paths = $this->search_by_content("/".$post['search_pattern']."/i");
-        $files = $model->getFile($paths);
+        $files = $model->getFiles($paths);
 
         $fileTable_object = new FileTable();
         $fileTable_html = $fileTable_object->getView($files,"Home/getView");
