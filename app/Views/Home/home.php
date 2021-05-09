@@ -6,7 +6,7 @@
 
   <?php if (isset($fileTable)) { echo $fileTable; } ?>
 
-  <?php if (isset($toolbar)) { echo $toolbar; } ?>
+  <!-- Il faut ajouter fonction DL <? //php if (isset($toolbar)) { echo $toolbar; } ?> -->
 
   <?php if (isset($comments)) { echo $comments; } ?>
 
