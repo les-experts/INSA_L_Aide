@@ -1,0 +1,10 @@
+FICHIER DE SUIVI - Reprise du PAO (Marie DOUET)
+
+- 30/01/2022 : 
+	Compréhension des rôles des différents groupes et projets (gitlab, github) 
+	Recherches sur l'utilité du fichier composer.json 
+	Recherches sur le PHP 
+	Installation de composer et du PHP sur mon ordinateur personnel
+	Première prise en main de GitHub
+	
+
